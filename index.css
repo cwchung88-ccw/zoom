@@ -3,26 +3,26 @@
    ========================================== */
 
 :root {
-  /* Colors */
-  --bg-dark: #060919;
-  --bg-darker: #03050f;
-  --card-bg: rgba(255, 255, 255, 0.03);
-  --card-border: rgba(255, 255, 255, 0.08);
+  /* Colors - Light Theme */
+  --bg-dark: #f0f3fa;
+  --bg-darker: #e2e8f5;
+  --card-bg: rgba(255, 255, 255, 0.65);
+  --card-border: rgba(255, 255, 255, 0.8);
   
-  --primary-glow: rgba(255, 152, 0, 0.15);
-  --secondary-glow: rgba(45, 140, 255, 0.12);
+  --primary-glow: rgba(255, 112, 67, 0.1);
+  --secondary-glow: rgba(45, 140, 255, 0.08);
   
   /* Accent Colors */
-  --color-dawn-gold: #ffb74d;
-  --color-dawn-orange: #ff7043;
-  --color-sun: #ffd54f;
-  --color-zoom: #2d8cff;
+  --color-dawn-gold: #d84315;
+  --color-dawn-orange: #f4511e;
+  --color-sun: #ff8f00;
+  --color-zoom: #0076ff;
   
   /* Text Colors */
-  --text-primary: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.75);
-  --text-muted: rgba(255, 255, 255, 0.45);
-  --text-verse: #ffe082;
+  --text-primary: #1b2035;
+  --text-secondary: #4a5472;
+  --text-muted: #858fa6;
+  --text-verse: #c62828;
   
   /* Typography */
   --font-family: 'Outfit', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
@@ -60,11 +60,11 @@ body {
   background: var(--bg-darker);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.15);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 /* Ambient Background Glows */
@@ -74,7 +74,7 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: radial-gradient(circle at 50% 0%, rgba(13, 20, 56, 0.8) 0%, var(--bg-darker) 100%);
+  background: radial-gradient(circle at 50% 0%, rgba(220, 230, 250, 0.6) 0%, var(--bg-darker) 100%);
   z-index: -3;
 }
 
@@ -130,14 +130,14 @@ body {
 /* Glass Card Container */
 .card-container {
   width: 100%;
-  background: rgba(13, 17, 38, 0.55);
+  background: var(--card-bg);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid var(--card-border);
   border-radius: 28px;
   padding: 24px 20px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4), 
-              inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 48px rgba(13, 20, 56, 0.08), 
+              inset 0 1px 1px rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -213,7 +213,7 @@ body {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #ffffff 40%, rgba(255, 255, 255, 0.7) 100%);
+  background: linear-gradient(135deg, var(--color-dawn-orange) 0%, var(--color-sun) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -231,11 +231,11 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 171, 64, 0.2);
   border-radius: 10px;
   padding: 6px 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(13, 20, 56, 0.04);
 }
 
 .clock-icon {
