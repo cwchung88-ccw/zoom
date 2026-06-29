@@ -1,10 +1,10 @@
 // Zoom Invitation Configuration
 const ZOOM_CONFIG = {
   // Church and Service Details
-  churchName: "기쁜소식부천교회",
-  serviceTitle: "새벽예배",
-  serviceSubTitle: "새벽예배에 참석하여 들려오는 말씀에 은혜를 입으시길 바랍니다.",
-  serviceTime: "매일 오전 05:30",
+  churchName: "기쁜소식 부천교회",
+  serviceTitle: "줌예배 시간 안내",
+  serviceSubTitle: "",
+  serviceTime: "",
   
   // Bible Verse of the day / representative verse
   bibleVerse: "“하나님은 영이시니 예배하는 자가 신령과 진정으로 예배할찌니라” (요한복음 4:24)",
