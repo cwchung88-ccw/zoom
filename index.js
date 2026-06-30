@@ -13,9 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Zoom Link Join Button
     const btnJoinZoom = document.getElementById("btn-join-zoom");
+    const isDawnPage = document.getElementById("dawn-time") !== null;
+    
     if (btnJoinZoom) {
-      btnJoinZoom.href = ZOOM_CONFIG.zoomLink || "#";
+      if (isDawnPage && ZOOM_CONFIG.dawn && ZOOM_CONFIG.dawn.zoomLink) {
+        btnJoinZoom.href = ZOOM_CONFIG.dawn.zoomLink;
+      } else {
+        btnJoinZoom.href = ZOOM_CONFIG.zoomLink || "https://us02web.zoom.us/j/8513262934?pwd=cGhpZkpqZk5qU2VRVUlpVnM3VTd0Zz09";
+      }
     }
+
     
     // Connection Info
     const txtMeetingId = document.getElementById("txt-meeting-id");
@@ -23,6 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
     
     if (txtMeetingId) txtMeetingId.textContent = ZOOM_CONFIG.meetingId || "";
     if (txtPassword) txtPassword.textContent = ZOOM_CONFIG.password || "";
+    
+    // Dawn Time Display
+    const dawnTimeEl = document.getElementById("dawn-time");
+    if (dawnTimeEl && ZOOM_CONFIG.dawn && ZOOM_CONFIG.dawn.time) {
+      dawnTimeEl.textContent = ZOOM_CONFIG.dawn.time;
+    }
     
     // Verse
     const txtBibleVerse = document.getElementById("txt-bible-verse");
@@ -32,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const txtInstructions = document.getElementById("txt-instructions");
     if (txtInstructions) txtInstructions.textContent = ZOOM_CONFIG.instructions || "";
   }
+
 
   // 2. Clipboard Copy Helper (with in-app webview fallback)
   function copyToClipboard(text) {

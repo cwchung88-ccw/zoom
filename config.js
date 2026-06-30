@@ -15,5 +15,13 @@ const ZOOM_CONFIG = {
   password: "0691",
   
   // Additional Instructions
-  instructions: "인터넷으로 예배를 드리시는 분은 화면을 켜고 바르게 앉아 오프라인 예배에 참석하는 마음으로 임해주시기 바랍니다."
+  instructions: "인터넷으로 예배를 드리시는 분은 화면을 켜고 바르게 앉아 오프라인 예배에 참석하는 마음으로 임해주시기 바랍니다.",
+
+  // Dawn Worship Specific Configuration
+  dawn: {
+    zoomLink: "https://us02web.zoom.us/j/8513262934?pwd=cGhpZkpqZk5qU2VRVUlpVnM3VTd0Zz09", // If standard Zoom link is used, keeping it same
+    time: "매일 새벽 5:30",
+    badge: "새벽예배 안내"
+  }
 };
+
